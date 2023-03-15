@@ -5,18 +5,20 @@ import FilterController from "./filterController";
 import SearchPanel from "./searchPanel";
 import ToggleView from "./toggleView";
 
-const AddAndFilterContainer = () => {
+const AddAndFilterContainer = (props) => {
+  const {addTaskHandler, view, viewChangeHandler, clearSelected, clearCompleted, reset, searchTerm, searchInputChange, filterTerm, filterInputChange} = props;
+
   return (
     <>
-      <AddTaskContainer />
+      <AddTaskContainer addTaskHandler={addTaskHandler} />
 
-      <SearchPanel />
+      <SearchPanel searchTerm={searchTerm} searchInputChange={searchInputChange} />
 
-      <FilterController />
+      <FilterController filterTerm={filterTerm} filterInputChange={filterInputChange} />
 
-      <BulkController />
+      <BulkController clearSelected={clearSelected} clearCompleted={clearCompleted} reset={reset}  />
 
-      <ToggleView />
+      <ToggleView view={view} viewChangeHandler={viewChangeHandler} />
     </>
   );
 };

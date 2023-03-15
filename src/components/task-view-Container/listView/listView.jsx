@@ -1,12 +1,22 @@
-import React from 'react'
-import ListItem from './listItem'
+import React from "react";
+import ListItem from "./listItem";
 
-const ListView = () => {
+const ListView = (props) => {
+  const { tasks, selectTask, deleteTask, changeStatus } = props;
   return (
     <div>
-          <ListItem/>
-        </div>
-  )
-}
+      {tasks.length > 0 &&
+        tasks.map((task) => (
+          <ListItem
+            key={task.id}
+            task={task}
+            selectTask={selectTask}
+            deleteTask={deleteTask}
+            changeStatus={changeStatus}
+          />
+        ))}
+    </div>
+  );
+};
 
-export default ListView
+export default ListView;

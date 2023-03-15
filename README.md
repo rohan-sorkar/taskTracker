@@ -1,5 +1,5 @@
 # Task-tracker
-This is a task tracker application. where you can monitor your daily task.
+This is a task tracker application. where you can track your daily task.
 
 #### [Live-App](https://track-your-task.netlify.app/)
 
@@ -26,9 +26,7 @@ This is a task tracker application. where you can monitor your daily task.
 
 ## Dependencies
 - React
-- React hook form
 - Tailwind css
-- sweetalert2
 - React-icons
 
 ## What the app look like
